@@ -18,6 +18,7 @@ IServiceCollection.prototype.addMVC = function () {
         decorate(injectable(), Controller);
     } catch (error) {
         // FIXME: should fix this error
+        // eslint-disable-next-line no-console
         console.log('[WARN] Cannot apply @injectable decorator multiple times.');
     }
     return this;
