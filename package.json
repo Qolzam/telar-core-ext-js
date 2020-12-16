@@ -88,17 +88,19 @@
   },
   "homepage": "https://github.com/telarpress/telar-core-js#readme",
   "dependencies": {
-    "url-join": "^4.0.1",
-    "koa-bodyparser": "^4.3.0"
+    "koa-bodyparser": "^4.3.0",
+    "url-join": "^4.0.1"
   },
   "peerDependencies": {
     "@koa/router": ">=10.0.0",
     "@telar/core": ">=1.1.8",
     "@telar/mvc": ">=1.4.3",
-    "reflect-metadata": ">=0.1.13"
-
+    "reflect-metadata": ">=0.1.13",
+    "koa": ">=2.13.0",
+    "ajv": ">=7.0.0"
   },
   "devDependencies": {
+    "ajv": "^7.0.0",
     "@koa/router": "^10.0.0",
     "@telar/core": "^1.1.8",
     "@telar/mvc": "^1.4.3",
