@@ -1,3 +1,18 @@
+# 1.0.0 (2020-12-16)
+
+
+### Bug Fixes
+
+* correct repo owner name ([c26c5a0](https://github.com/Qolzam/telar-core-ext-js/commit/c26c5a0a85018a502d143eeaf8b34bb7f30afd47))
+* remove type module from package.json ([a070f05](https://github.com/Qolzam/telar-core-ext-js/commit/a070f05ecae5ab9b2d13ae5de721d5e51150d3c3))
+* set peerDependencies ([d178a0c](https://github.com/Qolzam/telar-core-ext-js/commit/d178a0c5ef89b0e817edcea4861e0600eaac3766))
+* set the right repository name ([b680fa9](https://github.com/Qolzam/telar-core-ext-js/commit/b680fa9a48191b081c4519fc93ae4fc51eae4673))
+
+
+### Features
+
+* init telar core extensions ([5203b91](https://github.com/Qolzam/telar-core-ext-js/commit/5203b9136afd06167897bac713a1aff27e579434))
+
 ## [1.0.23](https://github.com/telarpress/telar-core-js/compare/v1.0.22...v1.0.23) (2020-11-08)
 
 
