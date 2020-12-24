@@ -23,7 +23,9 @@ IWebHostBuilder.prototype.useBootstrap = async function useBootstrap<TBootstrap 
     type: new (configuration: IConfiguration) => TBootstrap,
 ) {
     const startup = new type(this.getSettings());
-    await startup.configureServices(new ServiceCollection(this.properties[COMMON.container] as Container));
+    await startup.configureServices(
+        new ServiceCollection(this.properties, this.properties[COMMON.container] as Container),
+    );
     startup.configure(
         new ApplicationBuilder(this.properties, new ServiceProvider(this.properties[COMMON.container] as Container)),
         new WebHostEnvironment('telar', process.env.NODE_ENV as string),

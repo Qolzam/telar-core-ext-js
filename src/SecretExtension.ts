@@ -1,33 +1,30 @@
-import { IApplicationBuilder } from '@telar/core/IApplicationBuilder';
+import { IServiceCollection } from '@telar/core/IServiceCollection';
+import { Secret, SecretType } from './Secret';
 import { decrypt } from './utils/crypt';
 // import bodyParser from 'koa-bodyparser';
-declare module '@telar/core/IApplicationBuilder' {
+declare module '@telar/core/IServiceCollection' {
     /**
      * Constains extensions for configuring routing
      */
-    export interface IApplicationBuilder<StateT, CustomT> {
+    export interface IServiceCollection {
         /**
          * Add the routing middleware
          */
-        useSecret(): IApplicationBuilder<StateT, CustomT>;
+        useSecret(): IServiceCollection;
     }
 }
 
-IApplicationBuilder.prototype.useSecret = function () {
+IServiceCollection.prototype.useSecret = function () {
     const { appsettings, secret } = this.properties.config;
     if (appsettings.secret_key && secret && Object.keys(secret).length) {
-        let newSecret = {};
+        const newSecret: Secret = new Secret();
         const secretNames = Object.keys(secret);
         secretNames.forEach((name) => {
             const secretValue = secret[name];
-            newSecret = {
-                ...newSecret,
-                [name]: decrypt(secretValue, Buffer.from(appsettings.secret_key, 'base64').toString('ascii')),
-            };
+            newSecret[name] = decrypt(secretValue, Buffer.from(appsettings.secret_key, 'base64').toString('ascii'));
         });
-        this.properties.config.secret = newSecret;
-        // eslint-disable-next-line no-console
-        console.log(newSecret);
+
+        this.bind(SecretType).toConstantValue(newSecret);
     }
     return this;
 };
