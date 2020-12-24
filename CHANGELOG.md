@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Qolzam/telar-core-ext-js/compare/v1.2.0...v1.2.1) (2020-12-24)
+
+
+### Bug Fixes
+
+* refactor secret function name ([e2ec1cb](https://github.com/Qolzam/telar-core-ext-js/commit/e2ec1cbb67a8d502577426ceb4ed8dd9841c801b))
+
 # [1.2.0](https://github.com/Qolzam/telar-core-ext-js/compare/v1.1.1...v1.2.0) (2020-12-24)
 
 
