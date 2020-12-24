@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Qolzam/telar-core-ext-js/compare/v1.1.1...v1.2.0) (2020-12-24)
+
+
+### Features
+
+* bind secret to service collection ([56b4cb7](https://github.com/Qolzam/telar-core-ext-js/commit/56b4cb7d82fe85589167cc5a8a3be61dbcdea8fe))
+
 ## [1.1.1](https://github.com/Qolzam/telar-core-ext-js/compare/v1.1.0...v1.1.1) (2020-12-24)
 
 
