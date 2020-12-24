@@ -15,14 +15,14 @@ declare module '@telar/core/IApplicationBuilder' {
 
 IApplicationBuilder.prototype.useSecret = function () {
     const { appsettings, secret } = this.properties.config;
-    if (appsettings.sercretKey && secret && Object.keys(secret).length) {
+    if (appsettings.secret_key && secret && Object.keys(secret).length) {
         let newSecret = {};
         const secretNames = Object.keys(secret);
         secretNames.forEach((name) => {
             const secretValue = secret[name];
             newSecret = {
                 ...newSecret,
-                [name]: decrypt(secretValue, Buffer.from(appsettings.sercretKey, 'base64').toString()),
+                [name]: decrypt(secretValue, Buffer.from(appsettings.secret_key, 'base64').toString('ascii')),
             };
         });
         this.properties.config.secret = newSecret;
