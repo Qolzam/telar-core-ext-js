@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Qolzam/telar-core-ext-js/compare/v1.1.0...v1.1.1) (2020-12-24)
+
+
+### Bug Fixes
+
+* change secret key name to secret_key ([b39f537](https://github.com/Qolzam/telar-core-ext-js/commit/b39f53728852bdf373cd3a3e9500cb81942f90e8))
+
 # [1.1.0](https://github.com/Qolzam/telar-core-ext-js/compare/v1.0.0...v1.1.0) (2020-12-24)
 
 
