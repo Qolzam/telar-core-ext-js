@@ -8,13 +8,13 @@ declare module '@telar/core/IServiceCollection' {
      */
     export interface IServiceCollection {
         /**
-         * Add the routing middleware
+         * Add secret into service collection
          */
-        useSecret(): IServiceCollection;
+        addSecret(): IServiceCollection;
     }
 }
 
-IServiceCollection.prototype.useSecret = function () {
+IServiceCollection.prototype.addSecret = function () {
     const { appsettings, secret } = this.properties.config;
     if (appsettings.secret_key && secret && Object.keys(secret).length) {
         const newSecret: Secret = new Secret();
