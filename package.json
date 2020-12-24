@@ -79,7 +79,11 @@
   },
   "keywords": [
     "telar",
-    "core"
+    "core",
+    "extensions",
+    "mvc",
+    "telar-core",
+    "telar-mvc"
   ],
   "author": "Amir Movahedi <amir.gholzam@live.com>",
   "license": "MIT",
@@ -88,6 +92,7 @@
   },
   "homepage": "https://github.com/Qolzam/telar-core-ext-js#readme",
   "dependencies": {
+    "hybrid-crypto-js": "^0.2.4",
     "koa-bodyparser": "^4.3.0",
     "url-join": "^4.0.1"
   },
