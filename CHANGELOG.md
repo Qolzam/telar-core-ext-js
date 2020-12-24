@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Qolzam/telar-core-ext-js/compare/v1.0.0...v1.1.0) (2020-12-24)
+
+
+### Features
+
+* add usesecret() ([0c0c018](https://github.com/Qolzam/telar-core-ext-js/commit/0c0c018772ca8382d69c7d5415f5951935e228de))
+
 # 1.0.0 (2020-12-16)
 
 
