@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Qolzam/telar-core-ext-js/compare/v1.2.1...v1.3.0) (2021-01-06)
+
+
+### Features
+
+* add secret key as a parameter ([a7b7183](https://github.com/Qolzam/telar-core-ext-js/commit/a7b7183c523a4c09ccacfb8a7ae24aa04f24e32f))
+
 ## [1.2.1](https://github.com/Qolzam/telar-core-ext-js/compare/v1.2.0...v1.2.1) (2020-12-24)
 
 
