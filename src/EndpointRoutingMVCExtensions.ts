@@ -1,7 +1,7 @@
 import { bindWithRouter } from '@telar/mvc';
 import { COMMON } from '@telar/core';
 import { IApplicationBuilder } from '@telar/core/IApplicationBuilder';
-// import bodyParser from 'koa-bodyparser';
+
 declare module '@telar/core/IApplicationBuilder' {
     /**
      * Constains extensions for configuring routing

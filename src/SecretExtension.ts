@@ -1,7 +1,7 @@
 import { IServiceCollection } from '@telar/core/IServiceCollection';
 import { Secret, SecretType } from './Secret';
 import { decrypt } from './utils/crypt';
-// import bodyParser from 'koa-bodyparser';
+
 declare module '@telar/core/IServiceCollection' {
     /**
      * Constains extensions for configuring routing
@@ -10,18 +10,18 @@ declare module '@telar/core/IServiceCollection' {
         /**
          * Add secret into service collection
          */
-        addSecret(): IServiceCollection;
+        addSecret(secretKey: string): IServiceCollection;
     }
 }
 
-IServiceCollection.prototype.addSecret = function () {
-    const { appsettings, secret } = this.properties.config;
-    if (appsettings.secret_key && secret && Object.keys(secret).length) {
+IServiceCollection.prototype.addSecret = function (secretKey: string) {
+    const { secret } = this.properties.config;
+    if (secretKey && secret && Object.keys(secret).length) {
         const newSecret: Secret = new Secret();
         const secretNames = Object.keys(secret);
         secretNames.forEach((name) => {
             const secretValue = secret[name];
-            newSecret[name] = decrypt(secretValue, Buffer.from(appsettings.secret_key, 'base64').toString('ascii'));
+            newSecret[name] = decrypt(secretValue, Buffer.from(secretKey, 'base64').toString('ascii'));
         });
 
         this.bind(SecretType).toConstantValue(newSecret);
